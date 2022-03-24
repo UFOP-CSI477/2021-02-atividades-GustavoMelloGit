@@ -2,11 +2,11 @@
 
 ## Atualize os seus dados
 
-- Nome:
-- Matrícula:
-- Curso:
-- Semestre/Ano correntes:
-- Link para o seu GitHub:
+- Nome: Gustavo Marques de Mello
+- Matrícula: 19.2.8048
+- Curso: Sistemas de Informação
+- Semestre/Ano correntes: 21.2
+- Link para o seu GitHub: https://github.com/GustavoMelloGit
 
 ## [Projeto final:](./Projeto/README.md)
 
