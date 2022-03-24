@@ -12,4 +12,4 @@
 
 Apresente uma breve descrição do seu projeto.
 
-  O projeto consiste em um sistema onde o usuário conseguirá guardar sua contas, senhas, dados sensíveis. Dentre as possibilidades de utilização do sistema, o usuário poderá ver a força da senha, gerar senhas fortes e comparar senhas, onde esses dados serão guardados em uma conta criada pelo usuário. 
+  O projeto consiste em um sistema onde o usuário conseguirá guardar sua contas, senhas e dados sensíveis. Dentre as possibilidades de utilização do sistema, o usuário poderá ver a força da senha, gerar senhas fortes e comparar senhas, onde esses dados serão guardados em uma conta criada pelo usuário. 
