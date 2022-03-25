@@ -62,13 +62,11 @@
   O projeto consiste em um sistema onde o usuário conseguirá guardar sua contas, senhas e dados sensíveis. O sistema planeja facilitar a vida dos usuários, permitindo que eles possam acessar suas contas e dados de forma segura e facilitada. 
 
 ### Frameworks
-> **Front-end:** [React.js](https://reactjs.org/)
-<br/>
+> **Front-end:** [React.js](https://reactjs.org/) <br/>
 > **Back-end:** [Node.js](https://nodejs.org/en/)
 
 ### Linguagens
-> **Front-end:** [TypeScript](https://www.typescriptlang.org/)
-<br/>
+> **Front-end:** [TypeScript](https://www.typescriptlang.org/)<br/>
 > **Back-end:** [TypeScript](https://www.typescriptlang.org/)
 
 ## Utilização
