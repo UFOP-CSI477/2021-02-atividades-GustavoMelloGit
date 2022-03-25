@@ -29,9 +29,9 @@
     <a href="https://github.com/UFOP-CSI477/2021-02-atividades-GustavoMelloGit"><strong>Documentação »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/UFOP-CSI477/2021-02-atividades-GustavoMelloGit/issues">Reportar bugs</a>
+    <a href="https://github.com/UFOP-CSI477/2021-02-atividades-GustavoMelloGit/issues/new">Reportar bugs</a>
     ·
-    <a href="https://github.com/UFOP-CSI477/2021-02-atividades-GustavoMelloGit/issues">Solicite uma feature</a>
+    <a href="https://github.com/UFOP-CSI477/2021-02-atividades-GustavoMelloGit/issues/new">Solicite uma feature</a>
   </p>
 </div>
 <br/>
