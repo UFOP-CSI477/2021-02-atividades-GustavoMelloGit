@@ -19,7 +19,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/UFOP-CSI477/2021-02-atividades-GustavoMelloGit">
-    <img src="./logo.png" alt="Logo" width="170" height="170">
+    <img src="./Logo.png" alt="Logo" width="170" height="170">
   </a>
 
   <h3 align="center">GMPM</h3>
