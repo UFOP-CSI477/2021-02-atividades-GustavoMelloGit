@@ -21,8 +21,7 @@
   <a href="https://github.com/UFOP-CSI477/2021-02-atividades-GustavoMelloGit">
     <img src="./Logo.png" alt="Logo" width="170" height="170">
   </a>
-
-  <h3 align="center">GMPM</h3>
+  <h3 align="center"><strong>GMPM</strong></h3>
 
   <p align="center">
     Nós guardamos seus dados com segurança
@@ -30,9 +29,9 @@
     <a href="https://github.com/UFOP-CSI477/2021-02-atividades-GustavoMelloGit"><strong>Documentação »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Reportar bugs</a>
+    <a href="https://github.com/UFOP-CSI477/2021-02-atividades-GustavoMelloGit/issues">Reportar bugs</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Solicite uma feature</a>
+    <a href="https://github.com/UFOP-CSI477/2021-02-atividades-GustavoMelloGit/issues">Solicite uma feature</a>
   </p>
 </div>
 <br/>
