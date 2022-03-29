@@ -42,6 +42,92 @@
             </li>
         </ul>
     </nav>
+    <section>
+        <div class="section__content">
+            <div class="pessoas__form__wrapper">
+                <form action="." method="post" class="pessoas__form">
+                    <div class="pessoas__form__content">
+                        <div class="pessoas__form__input__wrapper">
+                            <label for="name">Nome</label>
+                            <input type="text" name="name" placeholder="Nome">
+                        </div>
+                        <div class="pessoas__form__input__wrapper">
+                            <label for="cpf">CPF</label>
+                            <input type="number" name="cpf" placeholder="CPF" minlength="11" maxlength="11">
+                        </div>
+                        <div class="pessoas__form__input__wrapper">
+                            <label for="birthday">Data de nascimento</label>
+                            <input type="date" name="birthday" placeholder="Data de nascimento">
+                        </div>
+                        <div class="pessoas__form__input__wrapper">
+                            <label for="address">Endereço</label>
+                            <input type="text" name="address" placeholder="Endereço">
+                        </div>
+                        <div class="pessoas__form__input__wrapper">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" name="phone" placeholder="Telefone">
+                        </div>
+                        <div class="pessoas__form__input__wrapper">
+                            <label for="email">E-mail</label>
+                            <input type="email" name="email" placeholder="E-mail">
+                        </div>
+                        <div class="pessoas__form__input__wrapper">
+                            <label for="state">Estado</label>
+                            <input type="text" name="state" placeholder="Estado">
+                        </div>
+                    </div>
+                    <div class="pessoas__form__actions">
+                        <button type="reset" class="pessoas__form__reset">Limpar</button>
+                        <button type="submit" class="action pessoas__form__submit">Cadastrar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="pessoas__table__wrapper">
+                <table class="pessoas__table">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>CPF</th>
+                            <th>Data de Nascimento</th>
+                            <th>Endereço</th>
+                            <th>Telefone</th>
+                            <th>E-mail</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>João</td>
+                            <td>123.456.789-00</td>
+                            <td>01/01/2000</td>
+                            <td>Rua 1</td>
+                            <td>(11) 1111-1111</td>
+                            <td>email@email.com</td>
+                            <td>SP</td>
+                        </tr>
+                        <tr>
+                            <td>Maria</td>
+                            <td>123.456.789-00</td>
+                            <td>01/01/2000</td>
+                            <td>Rua 2</td>
+                            <td>(11) 1111-1111</td>
+                            <td>email2@email.com</td>
+                            <td>MG</td>
+                        </tr>
+                        <tr>
+                            <td>Pedro</td>
+                            <td>123.456.789-00</td>
+                            <td>01/01/2000</td>
+                            <td>Rua 3</td>
+                            <td>(11) 1111-1111</td>
+                            <td>email3@email.com</td>
+                            <td>RJ</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
 
 </body>
 
