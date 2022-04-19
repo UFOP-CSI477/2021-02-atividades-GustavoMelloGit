@@ -1,0 +1,108 @@
+:root{
+    --blue_dark: #242582;
+    --action: #F64C72;
+    --gray_medium: #99738E;
+    --gray_light: #f0f0f0
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--gray_light);
+    font-family: 'Poppins', Helvetica, sans-serif;
+    font-size: 14px;
+    color: #000;
+}
+nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: var(--blue_dark);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    padding-right: 2rem;
+}
+ul>*:not(:last-child){
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+section{
+    flex: 1;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./public/images/background.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section .section__content{
+    width: 65%;
+    height: 100%;
+    margin-top: 80px;
+}
+.active{
+    color: var(--action);
+}
+.action{
+    background-color: var(--action);
+    color: #fff;
+}
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.2rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1.1em;
+    text-transform: uppercase;
+}
+input{
+    flex: 1;
+    width: 100%;
+    height: 3rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 0 1rem;
+    font-size: 1.1rem;
+    outline: none;
+    color:rgba(36, 36, 36, 0.90);
+}
+.input__label{
+    padding: 0 .4rem;   
+    font-size: 1rem;
+}
+
+.card{
+    height: 40rem;
+    width: 30rem;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 1px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
