@@ -61,6 +61,12 @@
 ## Sobre o projeto
   O projeto consiste em um sistema onde o usuário conseguirá guardar sua contas, senhas e dados sensíveis. O sistema planeja facilitar a vida dos usuários, permitindo que eles possam acessar suas contas e dados de forma segura e facilitada. 
 
+## Prototipagem
+<a href="https://www.figma.com/file/B5hfGQhAIHqfqvqnOxcxCv/GMPM?node-id=0%3A1">Link do protótipo</a>
+
+![desktop-home]
+![mobile-home]
+
 ### Frameworks
 > **Front-end:** [React.js](https://reactjs.org/) <br/>
 > **Back-end:** [Node.js](https://nodejs.org/en/)
@@ -85,4 +91,8 @@
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/gustavo-marques-mello
-[product-screenshot]: images/screenshot.png
+[desktop-home]: images/desktop-home.png
+[mobile-home]: images/mobile-home.png
+[mobile-login_page]: images/mobile-login_page.png
+[mobile-menu]: images/mobile-menu.png
+[mobile-password_generation]: images/mobile-password_generation.png
