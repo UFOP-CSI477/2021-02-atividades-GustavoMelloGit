@@ -80,8 +80,9 @@ const HomeFormComponent: React.FC<HomeFormProps> = ({ onSubmit }) => {
           bank: '',
         } as HomeFormValues
       }
-      onSubmit={(values) => {
+      onSubmit={(values, { resetForm }) => {
         onSubmit(values);
+        resetForm();
       }}
       enableReinitialize
       validateOnChange={false}
