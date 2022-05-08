@@ -1,5 +1,3 @@
 export interface CurrenciesInterface {
-  simbolo: string;
-  nomeFormatado: string;
-  tipoMoeda: string;
+  [key: string]: string;
 }

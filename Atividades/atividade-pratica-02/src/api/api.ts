@@ -1,8 +1,10 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL:
-    'https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/Moedas?$format=json&',
+  baseURL: 'https://api.apilayer.com/fixer',
+  headers: {
+    apiKey: 'otRRaUPhkUNGPeyAra2PrD7LidiL1qaP',
+  },
 });
 
 export default api;

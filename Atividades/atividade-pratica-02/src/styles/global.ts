@@ -5,6 +5,16 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: 'Poppins', sans-serif !important;
+    }
+    body{
+        height: 100%;
+    }
+    html{
+        height: 100%
+    }
+    #root{
+        height: 100%;
     }
 `;
 

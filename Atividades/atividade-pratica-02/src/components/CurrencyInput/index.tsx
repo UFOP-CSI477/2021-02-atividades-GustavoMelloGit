@@ -1,13 +1,15 @@
-import { TextField } from '@mui/material';
-import React, { useState } from 'react';
+import React from 'react';
+import { TextField, TextFieldProps } from '@mui/material';
 
-interface CurrencyInputProps {
+type CurrencyInputProps = TextFieldProps & {
   fieldValue: string;
   setFieldValue: (value: string) => void;
-}
+};
+
 const CurrencyInput: React.FC<CurrencyInputProps> = ({
   fieldValue,
   setFieldValue,
+  ...rest
 }) => {
   function formatCurrency(value: string) {
     const options = { minimumFractionDigits: 2 };
@@ -36,6 +38,7 @@ const CurrencyInput: React.FC<CurrencyInputProps> = ({
           .replace(/\D/g, '');
         setFieldValue((+value / 100).toString());
       }}
+      {...rest}
     />
   );
 };

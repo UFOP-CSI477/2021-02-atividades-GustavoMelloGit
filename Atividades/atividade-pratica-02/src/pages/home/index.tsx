@@ -1,29 +1,58 @@
-import React, { useEffect, useState } from 'react';
-import {
-  Button,
-  Container,
-  MenuItem,
-  TextField,
-  Typography,
-} from '@mui/material';
-import { HomeContentWrapper, HomeFormGrid } from './styles';
+import React, { useCallback, useEffect, useState } from 'react';
+import { Button, MenuItem, Typography } from '@mui/material';
+import { HomeContainer, HomeContentWrapper, HomeFormGrid } from './styles';
 import CardComponent from '../../components/Card';
 import CurrencyInput from '../../components/CurrencyInput';
 import { CurrenciesInterface } from './interfaces';
-import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
 import api from '../../api/api';
+import SelectCurrency from './components/SelectCurrency';
+import { convertToBRL } from '../../utils/functions';
 
 const HomePage: React.FC = () => {
   const [currencyInput, setCurrencyInput] = useState('');
   const [currencies, setCurrencies] = useState([] as CurrenciesInterface[]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [convertFrom, setConvertFrom] = useState('');
+  const [convertTo, setConvertTo] = useState('');
+  const [exchangeResult, setExchangeResult] = useState(0);
 
-  const fetchCurrencies = async () => {
+  const handleExchangeCurrency = useCallback(async () => {
+    setIsLoading(true);
     try {
-      const response = await api.get('$top=10');
-      setCurrencies(response.data.value);
+      const response = await api.get(
+        `/convert?to=${convertTo}&from=${convertFrom}&amount=${currencyInput}`
+      );
+      setExchangeResult(response.data.result);
     } catch (e) {
       console.log(e);
     }
+    setIsLoading(false);
+  }, [convertFrom, convertTo, currencyInput]);
+
+  const fetchCurrencies = useCallback(async () => {
+    setIsLoading(true);
+    try {
+      const response = await api.get('/symbols');
+      setCurrencies(
+        Object.keys(response.data.symbols).map((key) => ({
+          [key]: response.data.symbols[key],
+        }))
+      );
+    } catch (e) {
+      console.log(e);
+    }
+    setIsLoading(false);
+  }, []);
+
+  const getSelectOptions = () => {
+    return currencies?.map((currency) => {
+      const symbol = Object.keys(currency)[0];
+      return (
+        <MenuItem key={symbol} value={symbol}>
+          {currency[symbol]} ({symbol})
+        </MenuItem>
+      );
+    });
   };
 
   useEffect(() => {
@@ -31,10 +60,10 @@ const HomePage: React.FC = () => {
     return () => {
       setCurrencies([]);
     };
-  }, []);
+  }, [fetchCurrencies]);
 
   return (
-    <Container>
+    <HomeContainer>
       <HomeContentWrapper>
         <CardComponent>
           <Typography variant='h2' component='h1'>
@@ -44,28 +73,37 @@ const HomePage: React.FC = () => {
             <CurrencyInput
               fieldValue={currencyInput}
               setFieldValue={setCurrencyInput}
+              label='Valor'
             />
-            <TextField label='Converter de' fullWidth name='convertFrom' select>
-              {currencies?.map((currency) => (
-                <MenuItem key={currency.simbolo} value={currency.simbolo}>
-                  {currency.nomeFormatado} ({currency.simbolo})
-                </MenuItem>
-              ))}
-            </TextField>
-            <Button variant='contained'>
-              <CurrencyExchangeIcon />
+            <SelectCurrency
+              label='Converter de'
+              options={getSelectOptions()}
+              setValue={setConvertFrom}
+              value={convertFrom}
+              isLoading={isLoading}
+            />
+            <SelectCurrency
+              label='Para'
+              options={getSelectOptions()}
+              setValue={setConvertTo}
+              value={convertTo}
+              isLoading={isLoading}
+            />
+            <Button variant='contained' onClick={handleExchangeCurrency}>
+              Converter
             </Button>
-            <TextField label='Para' fullWidth name='convertTo' select>
-              {currencies?.map((currency) => (
-                <MenuItem key={currency.simbolo} value={currency.simbolo}>
-                  {currency.nomeFormatado} ({currency.simbolo})
-                </MenuItem>
-              ))}
-            </TextField>
           </HomeFormGrid>
         </CardComponent>
+        <CardComponent>
+          <Typography variant='h2' component='h1'>
+            Resultado
+          </Typography>
+          <Typography variant='h4' component='h2'>
+            {convertToBRL(exchangeResult)}
+          </Typography>
+        </CardComponent>
       </HomeContentWrapper>
-    </Container>
+    </HomeContainer>
   );
 };
 export default HomePage;
