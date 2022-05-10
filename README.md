@@ -69,7 +69,7 @@
 
 ### Frameworks
 > **Front-end:** [React.js](https://reactjs.org/) <br/>
-> **Back-end:** [Node.js](https://nodejs.org/en/)
+> **Back-end:** [AdonisJs](https://adonisjs.com/)
 
 ### Linguagens
 > **Front-end:** [TypeScript](https://www.typescriptlang.org/)<br/>
