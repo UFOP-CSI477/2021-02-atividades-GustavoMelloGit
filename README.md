@@ -85,7 +85,16 @@
   </ul>
 
 ## Começando
+Para rodar o projeto, basta baixar seus arquivos, após isso realize os seguintes comandos dentro das pastas frontend e backend:
 
+```
+yarn (ou npm i) 
+```
+e depois:
+```
+yarn start (ou npm run start) - FRONTEND
+yarn dev   (ou npm run dev)   - BACKEND
+```
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
