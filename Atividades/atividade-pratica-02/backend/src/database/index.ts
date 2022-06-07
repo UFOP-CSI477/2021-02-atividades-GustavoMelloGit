@@ -16,7 +16,6 @@ createConnection().then(async (connection) => {
     user.name = 'AdminUser';
     user.email = 'admin@admin.com';
     user.password = await hash('admin', 10);
-    user.is_admin = true;
     await connection.manager.save(user);
     console.log('Saved a new user with id: ' + user.id);
   }

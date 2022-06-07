@@ -23,9 +23,6 @@ export class User {
   @Column({ select: false })
   password!: string;
 
-  @Column()
-  is_admin!: boolean;
-
   @OneToMany(() => Register, (register) => register.equipment)
   registers!: Register[];
 

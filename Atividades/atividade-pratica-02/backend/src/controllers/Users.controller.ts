@@ -20,7 +20,7 @@ export default class UsersController {
 
     const user = await userRepository.findOne(
       { email },
-      { select: ['id', 'name', 'is_admin', 'password'] }
+      { select: ['id', 'name', 'password'] }
     );
 
     if (!user)
@@ -35,7 +35,6 @@ export default class UsersController {
       {
         name: user.name,
         id: user.id,
-        is_admin: user.is_admin,
         email,
       },
       process.env.JWT_SECRET as string,
@@ -48,7 +47,7 @@ export default class UsersController {
   }
 
   static async create(req: Request, res: Response) {
-    const { name, email, password, is_admin }: ICreateUserDTO = req.body;
+    const { name, email, password }: ICreateUserDTO = req.body;
 
     if (!name)
       return res.status(400).json({
@@ -79,7 +78,6 @@ export default class UsersController {
       name,
       email,
       password: hashPassword,
-      is_admin: is_admin ? is_admin : false,
     });
 
     await userRepository.save(user);
