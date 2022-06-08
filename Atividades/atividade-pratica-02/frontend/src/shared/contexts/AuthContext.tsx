@@ -43,7 +43,6 @@ const AuthContextProvider: React.FC<FunctionalComponentProps> = ({
         email: data.email,
         name: data.name,
         id: data.id,
-        is_admin: data.is_admin,
         created_at: data.created_at,
         token: response.data.token,
       });

@@ -27,7 +27,6 @@ const LoginForm: React.FC<LoginFormProps> = ({ toggleForm }) => {
         email: userParsed.email,
         name: userParsed.name,
         id: userParsed.id,
-        is_admin: userParsed.is_admin,
         token: response.data.token,
         created_at: userParsed.created_at,
       });
